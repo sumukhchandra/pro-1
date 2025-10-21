@@ -13,7 +13,7 @@ router.route('/add').post((req, res) => {
   const description = req.body.description;
   const price = Number(req.body.price);
   const imageUrl = req.body.imageUrl;
-
+  console.log("dfbsfdb")
   const newBook = new Book({
     title,
     author,
@@ -24,7 +24,7 @@ router.route('/add').post((req, res) => {
 
   newBook.save()
     .then(() => res.json('Book added!'))
-    .catch(err => res.status(400).json('Error: ' + err));
+    .catch(err => res.status(400).json('Eror: ' + err));
 });
 
 router.route('/:id').get((req, res) => {
